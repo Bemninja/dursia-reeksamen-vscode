@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import dursiaLogo from "../../src/images/dursialogo.png";
 ---
 
 <MainLayout title="Features">
@@ -15,6 +17,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
     <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
     <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <!-- <img src="../assets/images/dursia-logo.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" /> -->
+    <Image class="w-full p-10 self-center col-span-full" src={dursiaLogo} alt="dursia logo" />
   </main>
 </MainLayout>
