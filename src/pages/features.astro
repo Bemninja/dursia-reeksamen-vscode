@@ -2,48 +2,60 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import dursiaLogo from "../../src/images/dursialogo.png";
+import IconButton from "../components/IconButton.astro";
 ---
 
 <MainLayout title="DURSIA - Features">
   <main>
     <!-- MOBIL -->
-    <section class="md:hidden container m-auto p-4 snap-y snap-mandatory overflow-y-scroll gap-8 h-screen scroll-smooth flex flex-col">
-      <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-      <Image class="w-full p-10 self-center col-span-full" src={dursiaLogo} alt="dursia logo" />
+    <section class="md:hidden container m-auto p-4 my-8 snap-y snap-mandatory overflow-y-scroll gap-8 h-dvh scroll-smooth flex flex-col">
+      <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="snap-center w-auto h-[90vh] object-contain my-8" />
+      <Image class="snap-center mx-auto my-8 max-w-[70%] max-h-[70vh] object-contain mb-30" src={dursiaLogo} alt="dursia logo" />
     </section>
 
     <!-- DESKTOP -->
-    <section class="md:grid md:grid-cols-3 md:gap-8 px-10 md:px-40 lg:px-80 xl:px-[10rem]">
-      <div class="md:col-span-full md:grid md:grid-cols-3 md:gap-8">
-        <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+    <section class="hidden md:grid md:grid-cols-3 md:gap-8 px-10 md:px-40 lg:px-80 xl:px-[10rem] py-12">
+      <!-- Row 1: images 1–3 -->
+      <div class="md:col-span-3 grid grid-cols-3 gap-8">
+        <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
       </div>
-      <div>
-        <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+
+      <!-- Row 2: images 4–6 -->
+      <div class="md:col-span-3 grid grid-cols-3 gap-8">
+        <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
       </div>
-      <div>
-        <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+
+      <!-- Row 3: images 7–9 -->
+      <div class="md:col-span-3 grid grid-cols-3 gap-8">
+        <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
+        <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain my-8" />
       </div>
-      <div class="md:flex md:items-center md:justify-center gap-8">
-        <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
-        <Image class="w-1/2 p-10 self-center" src={dursiaLogo} alt="dursia logo" />
+
+      <!-- Row 4: images 10–11 + centered logo -->
+      <div class="md:col-span-3 flex items-center justify-center gap-12 flex-wrap">
+        <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="h-[75vh] object-contain my-8 max-w-[28%]" />
+        <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="h-[75vh] object-contain my-8 max-w-[28%]" />
+        <Image class="max-w-[35%] p-10 object-contain my-8" src={dursiaLogo} alt="dursia logo" />
       </div>
     </section>
+
+    <IconButton href="/">
+      <img src="../assets/icons/arrow-back.svg" alt="back arrow" class="fixed bottom-4 right-4 z-50 w-14 h-14 md:bottom-8 md:right-8 rounded-full bg-black/30 p-2 backdrop-blur-sm hover:bg-black/50 transition" />
+    </IconButton>
   </main>
 </MainLayout>

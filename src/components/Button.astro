@@ -2,9 +2,39 @@
 const { href } = Astro.props;
 ---
 
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<a href={href} class="inline-flex
-  items-center justify-center gap-2.5 w-[9rem]
-  px-[1.75rem] py-[0.188rem]
-  rounded-lg border text-white
-  md:border-blue-800 md:text-blue-800"><slot /></a>
+<a
+  href={href}
+  class="relative inline-flex items-center justify-center gap-2.5
+    w-[9rem] px-[1.75rem] py-[0.188rem]
+    rounded-lg border border-blue-800/40 text-white
+    md:border-blue-800 md:text-blue-800
+    overflow-hidden bg-transparent hover:bg-blue-900/20
+    transition-colors duration-300"
+>
+  <!-- Thin rotating border only (always animating) -->
+  <span class="absolute inset-0 pointer-events-none rounded-lg
+    bg-gradient-conic from-blue-500 via-cyan-400 to-blue-500 via-50% from-0% to-100%
+    opacity-80 animate-rotate-border"></span>
+
+  <!-- Inner content (unaffected) -->
+  <span class="relative z-10">
+    <slot />
+  </span>
+</a>
+
+<style>
+  @keyframes rotate-border {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .animate-rotate-border {
+    animation: rotate-border 14s linear infinite;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 2px; /* ← this controls border thickness – adjust 1px–4px */
+  }
+</style>
