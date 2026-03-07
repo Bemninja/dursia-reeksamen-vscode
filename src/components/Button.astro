@@ -4,11 +4,12 @@ const { href } = Astro.props;
 
 <a
   href={href}
-  class="relative inline-flex items-center justify-center gap-2.5
-    w-[9rem] px-[1.75rem] py-[0.188rem]
-    rounded-lg border border-blue-800/40 text-white
+  class="inline-flex items-center justify-center gap-2.5 w-[9rem]
+    px-[1.75rem] py-[0.188rem]
+    rounded-lg border border-white
+    text-white
     md:border-blue-800 md:text-blue-800
-    overflow-hidden bg-transparent hover:bg-blue-900/20
+    relative overflow-hidden bg-transparent hover:bg-blue-800/20
     transition-colors duration-300"
 >
   <!-- Thin rotating border only (always animating) -->
@@ -35,6 +36,6 @@ const { href } = Astro.props;
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    padding: 2px; /* ← this controls border thickness – adjust 1px–4px */
+    padding: 1px;
   }
 </style>
