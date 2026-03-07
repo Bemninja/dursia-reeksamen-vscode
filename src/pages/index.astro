@@ -6,13 +6,13 @@ import dursiaLogo from "../../src/images/dursialogo.png";
 import Button from "../components/Button.astro";
 ---
 
-<MainLayout title="Titel">
-  <main class="h-screen grid grid-cols-2 grid-rows-[5fr_1fr] container mx-auto p-6 gap-y-25 gap-x-10 content-center md:flex">
-    <Image class="w-full p-10 self-center col-span-full" src={dursiaLogo} alt="dursia logo" />
-    <div class="flex justify-center items-center">
+<MainLayout title="DURSIA">
+  <main class="h-screen grid grid-cols-2 grid-rows-[5fr_1fr] container mx-auto p-6 gap-y-25 gap-x-10 content-center md:flex md:flex-row md:justify-center md:text-sky-700">
+    <Image class="w-full p-10 self-center col-span-full md:order-2 md:w-[40%]" src={dursiaLogo} alt="dursia logo" />
+    <div class="flex justify-center items-center md:order-1">
       <Button href="demo">Demo</Button>
     </div>
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center md:order-3">
       <Button href="features">Features</Button>
     </div>
   </main>

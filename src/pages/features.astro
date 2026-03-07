@@ -4,19 +4,46 @@ import { Image } from "astro:assets";
 import dursiaLogo from "../../src/images/dursialogo.png";
 ---
 
-<MainLayout title="Features">
-  <main class="container m-auto p-4 snap-y snap-mandatory overflow-y-scroll gap-8 h-screen scroll-smooth flex flex-col">
-    <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
-    <Image class="w-full p-10 self-center col-span-full" src={dursiaLogo} alt="dursia logo" />
+<MainLayout title="DURSIA - Features">
+  <main>
+    <!-- MOBIL -->
+    <section class="md:hidden container m-auto p-4 snap-y snap-mandatory overflow-y-scroll gap-8 h-screen scroll-smooth flex flex-col">
+      <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="snap-center w-auto h-screen object-contain" />
+      <Image class="w-full p-10 self-center col-span-full" src={dursiaLogo} alt="dursia logo" />
+    </section>
+
+    <!-- DESKTOP -->
+    <section class="md:grid md:grid-cols-3 md:gap-8 px-10 md:px-40 lg:px-80 xl:px-[10rem]">
+      <div class="md:col-span-full md:grid md:grid-cols-3 md:gap-8">
+        <img src="../assets/images/dursia1.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia2.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia3.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+      </div>
+      <div>
+        <img src="../assets/images/dursia4.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia5.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia6.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+      </div>
+      <div>
+        <img src="../assets/images/dursia7.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia8.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia9.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+      </div>
+      <div class="md:flex md:items-center md:justify-center gap-8">
+        <img src="../assets/images/dursia10.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <img src="../assets/images/dursia11.png" alt="dursia screenshot" class="mx-auto h-[75vh] object-contain" />
+        <Image class="w-1/2 p-10 self-center" src={dursiaLogo} alt="dursia logo" />
+      </div>
+    </section>
   </main>
 </MainLayout>
