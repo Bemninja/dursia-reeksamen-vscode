@@ -12,6 +12,9 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
+
+    <meta name="robots" content="noindex, nofollow" />
+
     <script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
   </head>
   <body class="bg-gradient-to-b from-[#06134A] via-[#fff] to-[#06134A]">
